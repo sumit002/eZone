@@ -1,0 +1,88 @@
+﻿<Controls:MetroWindow x:Class="MyElectronicZoneWpf.Modules.Masters.SaleMaster"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        Title="Sale Master" Height="370" Width="588" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <TabControl Height="330" HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="566"  SelectionChanged="tabControl1_SelectionChanged">
+            <TabItem Header="Add Sale" Name="tabItem1">
+                <Grid>
+                    <TextBox AutoWordSelection="False" Height="23" HorizontalAlignment="Right" Margin="0,10,136,0" Name="txtProdCode" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Type Product Code" ToolTip="Product Code" VerticalAlignment="Top" Width="282" />
+                    <Button Content="Search" Height="23" HorizontalAlignment="Left" Margin="130,74,0,0" Name="btnSearch" VerticalAlignment="Top" Width="72" Click="btnSearch_Click" />
+                    <Button Click="btnReset_Click" Content="Reset" Height="23" HorizontalAlignment="Right" Margin="0,74,262,0" Name="btnReset" VerticalAlignment="Top" Width="75" />
+                    <ComboBox DisplayMemberPath="Name" Height="23" HorizontalAlignment="Left" Margin="4,10,0,0" Name="cbProduct" SelectedValuePath="Id" ToolTip="Select Product" VerticalAlignment="Top" Width="120" Text="ss" />
+                    <ComboBox DisplayMemberPath="Name" Height="23" HorizontalAlignment="Left" Margin="4,42,0,0" Name="cbBrandCompany" SelectedValuePath="Id" ToolTip="Choose Brand / Company" VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,42,136,0" Name="txtStockCode" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Type Stock Code" ToolTip="Stock Code" VerticalAlignment="Top" Width="282" />
+                    <DataGrid AutoGenerateColumns="False" Height="175" HorizontalAlignment="Left" Margin="6,105,0,0" Name="dataGridPurchase" VerticalAlignment="Top" Width="550" IsReadOnly="True" SelectedCellsChanged="dataGridPurchase_SelectedCellsChanged" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Product" Binding="{Binding Product}" />
+                            <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                            <DataGridTextColumn Header="Product Code" Binding="{Binding ProductCode}" />
+                            <DataGridTextColumn Header="Stock Code" Binding="{Binding StockCode}" />
+                            <DataGridTextColumn Header="Avl Qty" Binding="{Binding AvlQuantity}" >
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Center" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Sale Price" Binding="{Binding SalePrice}" >
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <!--<DataGridTextColumn Header="Purchased On" Binding="{Binding PurchaseDate}" />-->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Controls:NumericUpDown Height="23" HorizontalAlignment="Left" Margin="418,10,0,0" Name="txtPriceFrom" ToolTip="Price From"  VerticalAlignment="Top" Width="120" />
+                    <Controls:NumericUpDown Height="23" HorizontalAlignment="Left" Margin="418,42,0,0" Name="txtPriceTo" ToolTip="Price To" VerticalAlignment="Top" Width="120" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Sale List" Name="tabItem2">
+                <Grid>
+                    <DataGrid AutoGenerateColumns="False" Height="212" HorizontalAlignment="Left" Margin="10,10,0,0" Name="datagridSales" VerticalAlignment="Top" Width="527" IsReadOnly="True" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Product Code" Binding="{Binding ProductCode}" />
+                            <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                            <DataGridTextColumn Header="Product" Binding="{Binding Product}" />
+                            <DataGridTextColumn Header="Sale Price" Binding="{Binding SalePrice}" >
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Qty" Binding="{Binding Quantity}" >
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Center" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Total Amt" Binding="{Binding Total}" >
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Amt Paid" Binding="{Binding AmountPaid}" >
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Sale To" Binding="{Binding SaleTo}" />
+                            <DataGridTextColumn Header="Contact" Binding="{Binding Contact}" />
+                            <DataGridTextColumn Header="Sale On" Binding="{Binding SaleDate}" />
+                            <DataGridTextColumn Header="Created On" Binding="{Binding CreatedDate}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Controls:MetroWindow>

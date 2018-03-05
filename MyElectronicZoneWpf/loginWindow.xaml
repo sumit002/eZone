@@ -1,0 +1,16 @@
+﻿<Controls:MetroWindow x:Class="MyElectronicZoneWpf.loginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        Title="Sign In" Height="186" Width="442" ResizeMode="NoResize" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <!--<Image Source="/MyElectronicZoneWpf;component/Images/Jellyfish.jpg" Stretch="UniformToFill"></Image>-->
+        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="157,94,0,0" Name="btnSave" VerticalAlignment="Top" Width="60" Click="btnSave_Click" ToolTip="Click to Login" TabIndex="2" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="157,12,0,0" Name="txtUsername" VerticalAlignment="Top" Width="150" ToolTip="Type your Username" MaxLength="100" TabIndex="0" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="157,52,0,0" Name="txtPassword" VerticalAlignment="Top" Width="150" ToolTip="Type Password" PasswordChar="*" MaxLength="100" TabIndex="1" />
+
+        <Label Content="Username" Height="28" HorizontalAlignment="Left" Margin="68,10,0,0" Name="lblUsername" VerticalAlignment="Top" Foreground="Black" />
+        <Label Content="Password" Height="28" HorizontalAlignment="Left" Margin="68,52,0,0" Name="lblPassword" VerticalAlignment="Top" Foreground="Black" />
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="232,94,0,0" Name="btnCancel" VerticalAlignment="Top" Width="60" Click="btnCancel_Click" TabIndex="3" />
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,48 @@
+﻿<Controls:MetroWindow x:Class="MyElectronicZoneWpf.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        Title="Our Story" Height="450" Width="588" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <FlowDocumentScrollViewer>
+            <FlowDocument x:Name="FD">
+                <Paragraph>
+                    <Image Source="/MyElectronicZoneWpf;component/Images/logo.png" Width="70" Height="70" Margin="0,0,30,0" />
+                    <Run FontSize="40">Summit Dash</Run>
+                    <Run FontSize="12">About Author</Run>
+                </Paragraph>
+                <Paragraph>
+                    Welcome to eZone !
+                </Paragraph>
+                <Paragraph>
+                    My name is Sumit Dash and am the founder of
+                    <Bold>eZone</Bold> , a place/store to find all your business strategies you crave. I started this product after being told by one of my younger brother's real life problem.
+                    
+                </Paragraph>
+                
+                <Paragraph>
+                    As a result I suggest to manage with a solution given by me and here it is. I also share ideas and techniques from my personal experience of getting in shape and doing it simple way.
+                    'eZone' is created to inspire you to get track of your business goals.
+                </Paragraph>
+
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </Grid>
+</Controls:MetroWindow>

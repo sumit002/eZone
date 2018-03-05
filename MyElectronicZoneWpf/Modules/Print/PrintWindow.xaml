@@ -1,0 +1,17 @@
+﻿<Window x:Class="MyElectronicZoneWpf.Modules.Print.PrintWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PrintWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button Content="Print" Click="Button_Click"></Button>
+            <!--Other print operations-->
+        </StackPanel>
+        <DocumentViewer  Grid.Column="1" x:Name="PreviewD">
+        </DocumentViewer>
+    </Grid>
+</Window>
